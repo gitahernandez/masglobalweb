@@ -1,0 +1,39 @@
+<div class="container">
+    <table>
+        <thead class="head">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>contractTypeName</th>
+                <th>roleId</th>
+                <th>salaryValue</th>
+                <th>calculatedSalary</th>
+            </tr>
+        </thead>
+        <tbody class="body">
+            <tr *ngFor="let employee of employees">
+                <td>
+                    {{employee.id}}
+                </td>
+                <td>
+                    {{employee.name}}
+                </td>
+                <td>
+                    {{employee.contractTypeName}}
+                </td>
+                <td>
+                    {{employee.roleId}}
+                </td>
+                <td>
+                    {{employee.salaryValue}}
+                </td>
+                <td>
+                    {{employee.calculatedSalary}}
+                </td>
+            </tr>
+            <tr *ngIf="employees.length === 0 ">
+                <td>There is no any employees</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
